@@ -18,6 +18,15 @@ public class PictureTester
     beach.explore();
   }
   
+  /** Method to test zeroRed */
+  public static void testZeroRed()
+  {
+	  Picture arch = new Picture("arch.jpg");
+	  arch.explore();
+	  arch.zeroRed();
+	  arch.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -60,6 +69,7 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     testZeroBlue();
+    testZeroRed();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();

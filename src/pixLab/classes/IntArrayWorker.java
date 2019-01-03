@@ -46,6 +46,24 @@ public class IntArrayWorker
     return total;
   }
   
+  public int getCount(int numberToFind)
+  {
+	  int count = 0;
+	  
+	  for(int [] row : matrix)
+	  {
+		  for(int item : row)
+		  {
+			  if(item == numberToFind)
+			  {
+				  count ++;
+			  }
+		  }
+	  }
+	  
+	  
+	  return count;
+  }
   /**
    * Method to fill with an increasing count
    */
