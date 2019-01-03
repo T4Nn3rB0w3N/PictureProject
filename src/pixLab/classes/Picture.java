@@ -130,6 +130,22 @@ public class Picture extends SimplePicture
     } 
   }
   
+  public void mirrorVerticalRToL()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  int width = pixels[0].length;
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col < width / 2; col++)
+		  {
+			  rightPixel = pixels[row][col];
+			  leftPixel = pixels[row][width - 1 - col];
+			  leftPixel.setColor(rightPixel.getColor());
+		  }
+	  }
+  }
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
