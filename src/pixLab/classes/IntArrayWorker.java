@@ -29,6 +29,35 @@ public class IntArrayWorker
     return total;
   }
   
+  public int getLargest()
+  {
+	  int largest = Integer.MIN_VALUE;
+	  
+	  for (int col = 0; col < matrix[0].length; col++)
+	  {
+		  for (int row = 0; row < matrix[0].length; row++)
+		  {
+			  if (matrix[row][col] > largest)
+			  {
+				  largest = matrix[row][col];
+			  }
+		  }
+	  }
+	return largest; 
+  }
+	
+  public int getColTotal(int column)
+  {
+	  int total = 0;
+	  
+	  for (int row = 0; row < matrix.length; row++)
+	  {
+		  total += matrix[row][column];
+	  }
+	  
+	  return total;
+  }
+  
   /**
    * Method to return the total using a nested for-each loop
    * @return the total of the values in the array
@@ -117,5 +146,5 @@ public class IntArrayWorker
       }
     }
   }
- 
+  
 }

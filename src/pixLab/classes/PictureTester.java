@@ -37,12 +37,20 @@ public class PictureTester
   }
   
   /** Method to test mirrorVertical from Right to Left */
-  public static void testMirrorVerticalRToL()
+  public static void testMirrorVerticalRightToLeft()
   {
 	  Picture blueMotorcycle = new Picture("blueMotorcycle.jpg");
 	  blueMotorcycle.explore();
-	  blueMotorcycle.mirrorVerticalRToL();
+	  blueMotorcycle.mirrorVerticalRightToLeft();
 	  blueMotorcycle.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+	  Picture redMotorcycle = new Picture("redMotorcycle.jpg");
+	  redMotorcycle.explore();
+	  redMotorcycle.mirrorHorizontal();
+	  redMotorcycle.explore();
   }
   
   /** Method to test mirrorTemple */
@@ -52,6 +60,14 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+	  Picture gull = new Picture("seagull.jpg");
+	  gull.explore();
+	  gull.mirrorGull();
+	  gull.explore();
   }
   
   /** Method to test the collage method */
@@ -77,21 +93,22 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    testZeroRed();
+    //testZeroBlue();
+    //testZeroRed();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
-    testMirrorVerticalRToL();
+    //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
