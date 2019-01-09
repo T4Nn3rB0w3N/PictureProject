@@ -202,7 +202,7 @@ public class Picture extends SimplePicture
 		  for (int col = 237; col < mirrorPoint; col++)
 		  {
 			  leftPixel = pixels[row][col];
-			  rightPixel = pixels[row][mirrorPoint - col +mirrorPoint];
+			  rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
 			  rightPixel.setColor(leftPixel.getColor());
 		  }
 	  }
@@ -280,24 +280,102 @@ public class Picture extends SimplePicture
         else
           leftPixel.setColor(Color.WHITE);
       }
+    } 
+  }
+  
+  /** These methods turns pictures into glitched art
+   * GlitchRed mirrors red values vertically
+   * GlitchyGreen mirrors green values horizontally
+   * doubleBlue multiplies blue values by 2
+   * halfGreen divides green values by 2
+   */
+  public void GlitchyRed()
+  {
+	  Pixel[][] pixels = this.getPixels2D(); 
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  int width = pixels[0].length;
+	  
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col  < width / 2; col++)
+		  {
+			  leftPixel = pixels[row][col];
+			  rightPixel = pixels[row][width - 1 - col];
+			  
+			  rightPixel.setRed(leftPixel.getRed());
+		  }
+	  }
+  }
+  public void GlitchyGreen()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel topPixel = null;
+	  Pixel botPixel = null;
+	  int height = pixels[0].length;
+	 
+	  for (int col = 0; col < pixels[0].length; col++)
+	  {
+		  for (int row = 0; row < height / 2; row++)
+		  {
+			  topPixel = pixels [row][col];
+			  botPixel = pixels [height - 1 - row][col];
+			  topPixel.setGreen(botPixel.getGreen());
+		  }
+	  }
+  }
+ 
+  public void doubleBlue()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setBlue(pixelObj.getBlue() * 2);
+      }
     }
   }
   
+  public void halfGreen()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setGreen(pixelObj.getGreen() / 2);
+      }
+    }
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    //Picture beach = new Picture("beach.jpg");
+    //beach.explore();
+    //beach.zeroBlue();
+    //beach.explore();
     
-    Picture arch = new Picture("arch.jpg");
-    arch.explore();
-    arch.zeroRed();
-    arch.explore();
+//    Picture arch = new Picture("arch.jpg");
+//    arch.explore();
+//    arch.zeroRed();
+//    arch.explore();
+    
+    Picture butterfly = new Picture("butterfly1.jpg");
+    butterfly.explore();
+    butterfly.GlitchyRed();
+    butterfly.GlitchyGreen();
+    butterfly.doubleBlue();
+    butterfly.halfGreen();
+    butterfly.explore();
+    
   }
+  	
+  			
+  		
+  
   
 } // this } is the end of class Picture, put all new methods before this

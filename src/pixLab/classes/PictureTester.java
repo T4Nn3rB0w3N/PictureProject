@@ -86,6 +86,13 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testGlitchy()
+  {
+	  Picture butterfly = new Picture("butterfly1.jpg");
+	  butterfly.GlitchyRed();
+	  butterfly.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -110,7 +117,8 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    testEdgeDetection();
+    //testEdgeDetection();
+    testGlitchy();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
