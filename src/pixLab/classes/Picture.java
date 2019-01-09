@@ -323,6 +323,7 @@ public class Picture extends SimplePicture
 		  }
 	  }
   }
+  
   public void GlitchyGreen()
   {
 	  Pixel[][] pixels = this.getPixels2D();
@@ -370,15 +371,15 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    //Picture beach = new Picture("beach.jpg");
-    //beach.explore();
-    //beach.zeroBlue();
-    //beach.explore();
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.zeroBlue();
+    beach.explore();
     
-//    Picture arch = new Picture("arch.jpg");
-//    arch.explore();
-//    arch.zeroRed();
-//    arch.explore();
+    Picture arch = new Picture("arch.jpg");
+    arch.explore();
+    arch.zeroRed();
+    arch.explore();
     
     Picture butterfly = new Picture("butterfly1.jpg");
     butterfly.explore();
