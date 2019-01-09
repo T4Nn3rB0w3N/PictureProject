@@ -193,8 +193,7 @@ public class Picture extends SimplePicture
   {
 	  int mirrorPoint = 351;
 	  Pixel leftPixel = null;
-	  Pixel rightPixel = null; 
-	  int count = 0;
+	  Pixel rightPixel = null;
 	  Pixel[][] pixels = this.getPixels2D();
 	  
 	  for (int row = 234; row < 306; row++)
