@@ -344,14 +344,14 @@ public class Picture extends SimplePicture
  
   public void doubleBlue()
   {
-    Pixel[][] pixels = this.getPixels2D();
-    for (Pixel[] rowArray : pixels)
-    {
-      for (Pixel pixelObj : rowArray)
-      {
-        pixelObj.setBlue(pixelObj.getBlue() * 2);
-      }
-    }
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setBlue(pixelObj.getBlue() * 2);
+		  }
+	  }
   }
   
   public void halfGreen()
