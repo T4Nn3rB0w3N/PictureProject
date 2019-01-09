@@ -1,4 +1,7 @@
 package pixLab.classes;
+
+import java.awt.Color;
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -9,14 +12,24 @@ package pixLab.classes;
  */
 public class PictureTester
 {
-  /** Method to test zeroBlue */
-  public static void testZeroBlue()
-  {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
-  }
+	public static void testChromakey()
+	{
+		Picture source = new Picture("picture name");
+		Picture background = new Picture("other picture name");
+		source.explore();
+		background.explore();
+		source.chromakey(background, Color.WHITE);
+		source.explore();
+	}
+	
+	/** Method to test zeroBlue */
+	public static void testZeroBlue()
+	{
+		Picture beach = new Picture("beach.jpg");
+		beach.explore();
+		beach.zeroBlue();
+		beach.explore();
+	}
   
   /** Method to test zeroRed */
   public static void testZeroRed()
