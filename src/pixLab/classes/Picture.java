@@ -352,7 +352,7 @@ public class Picture extends SimplePicture
 	  }
   }
   
-  /** These methods turns pictures into glitched art
+  /** These methods turn pictures into glitched art
    * GlitchRed mirrors red values vertically
    * GlitchyGreen mirrors green values horizontally
    * doubleBlue multiplies blue values by 2
