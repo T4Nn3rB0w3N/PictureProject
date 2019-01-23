@@ -22,6 +22,25 @@ public class PictureTester
 		source.explore();
 	}
 	
+	public static void testSteganography()
+	{
+		Picture source = new Picture("picture name");
+		Picture message = new Picture("hidden picture name");
+		source.explore();
+		message.explore();
+		source.hidePicture(message);
+		source.explore();
+		source.revealPicture();
+		source.explore();
+	}
+	
+	public static void testShift()
+	{
+		Picture source = new Picture("seagull.jpg");
+		source.explore();
+		source.shiftLeftRight(90);
+	}
+	
 	/** Method to test zeroBlue */
 	public static void testZeroBlue()
 	{
