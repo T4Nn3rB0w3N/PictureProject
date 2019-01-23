@@ -419,6 +419,19 @@ public class Picture extends SimplePicture
     }
   }
   
+  /* ------------For glitch art-----------
+   * need to make three copies, one going towards the right, another towards the left, another towards the top
+   * none of them should cover the original
+   * one copy needs to be totally green, another totally blue, with the last one being totally red
+   * copies should be partially transparent
+   * original copy needs to be clearly seen.
+   */
+  public void makeCopies()
+  {
+	  
+  }
+  
+  
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
