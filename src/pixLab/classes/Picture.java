@@ -418,7 +418,7 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+ 
   /* ------------For glitch art-----------
    * need to make three copies, one going towards the right, another towards the left, another towards the top
    * none of them should cover the original
@@ -428,9 +428,43 @@ public class Picture extends SimplePicture
    */
   public void makeCopies()
   {
+	/*
+	 * Not written in the testing section in PictureTester
+	 * this method is supposed to make the copies and assign them names for differentiation
+	 * this method is not finished and the purpose of the line of code below is to keep red lines from showing up
+	 */
+	Pixel[][] pixels = this.getPixels2D();
 	  
   }
   
+  public void paintRed()
+  {
+	/*
+	 * Not written in PictureTester testing section
+	 * This method replaces the correct copy's green values with red alternatives
+	 * 
+	 * might need to be a combination of the code found in halfGreen, shiftLeftRight, and shiftUpDown methods
+	 */
+	 Pixel[][] pixels = this.getPixels2D();
+	 for (Pixel[] rowArray : pixels)
+	 {
+		 for (Pixel pixelObj : rowArray)
+		 {
+			 pixelObj.setGreen(0);
+			 //Not finished yet
+		 }
+	 }
+  }
+  
+  public void paintBlue()
+  {
+	 /*
+	  * This is not being tested in PictureTester
+	  * this method is supposed to replace the green values of one of the copies to blue alternatives
+	  * it is also supposed to use the appropriate name of the copy it will use
+	  */
+	 Pixel[][] pixels = this.getPixels2D();
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 
