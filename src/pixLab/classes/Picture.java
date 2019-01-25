@@ -96,7 +96,7 @@ public class Picture extends SimplePicture
 		for (int col = 0; col < pixels[0].length && col < hiddenPixels[0].length; col++)
 		{
 			// There is a message to hide
-			if (hiddenPixels[row][col].colorDistance(Color.WHITE) > 5);
+			if (hiddenPixels[row][col].colorDistance(Color.WHITE) > 5)
 			{
 				if (pixels[row][col].getRed() > 0 && pixels[row][col].getRed() % 2 != 1)
 				{
