@@ -491,7 +491,7 @@ public class Picture extends SimplePicture
 	/*
 	 * Not written in PictureTester testing section
 	 * This method replaces the correct copy's green values with red alternatives
-	 * 
+	 * try to write a function where if the green value divided by the average of the blue and red values is greater than 1, the red and green values switch values.
 	 * might need to be a combination of the code found in halfGreen, shiftLeftRight, and shiftUpDown methods
 	 */
 	 Pixel[][] pixels = this.getPixels2D();
@@ -499,7 +499,12 @@ public class Picture extends SimplePicture
 	 {
 		 for (Pixel pixelObj : rowArray)
 		 {
-			 pixelObj.setGreen(0);
+			 pixelObj.getGreen();
+			 pixelObj.getRed();
+			 pixelObj.getBlue();
+			 pixelObj.setBlue(pixelObj.getBlue() / 2);
+			 pixelObj.setGreen(pixelObj.getGreen() / 2);
+			 pixelObj.setRed(pixelObj.getRed());
 			 //Not finished yet
 		 }
 	 }
@@ -524,19 +529,24 @@ public class Picture extends SimplePicture
 //    beach.explore();
 //    beach.zeroBlue();
 //    beach.explore();
-    
+//    
 //    Picture arch = new Picture("arch.jpg");
 //    arch.explore();
 //    arch.zeroRed();
 //    arch.explore();
+//    
+//    Picture butterfly = new Picture("butterfly1.jpg");
+//    butterfly.explore();
+//    butterfly.GlitchyRed();
+//    butterfly.GlitchyGreen();
+//    butterfly.doubleBlue();
+//    butterfly.halfGreen();
+//    butterfly.explore();
     
-    Picture butterfly = new Picture("butterfly1.jpg");
-    butterfly.explore();
-    butterfly.GlitchyRed();
-    butterfly.GlitchyGreen();
-    butterfly.doubleBlue();
-    butterfly.halfGreen();
-    butterfly.explore();
+    Picture link = new Picture("characterLink.png");
+    link.explore();
+    link.paintRed();
+    link.explore();
     
   }
   	
